@@ -96,7 +96,7 @@ public class BannerLayout extends FrameLayout {
             //绘制默认选中状态图形
             GradientDrawable selectedGradientDrawable = new GradientDrawable();
             selectedGradientDrawable.setShape(GradientDrawable.OVAL);
-            selectedGradientDrawable.setColor(Color.parseColor("#56DDBE"));
+            selectedGradientDrawable.setColor(Color.parseColor("#83AAF9"));
             selectedGradientDrawable.setSize(dp2px(5), dp2px(5));
             selectedGradientDrawable.setCornerRadius(dp2px(5) / 2);
             mSelectedDrawable = new LayerDrawable(new Drawable[]{selectedGradientDrawable});

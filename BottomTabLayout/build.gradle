@@ -4,14 +4,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        release {
-        storeFile file('D:\\elevendev.jks')
-            storePassword '10.23456'
-            keyAlias 'elevendev'
-            keyPassword '10.23456'
-        }
-    }
     namespace 'cn.elevendev.bottomtablayout'
     compileSdk 33
 
