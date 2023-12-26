@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义3D画廊轮播-->
+    <attr name="interval" format="integer" />  <!-- 自定义属性：轮播项间隔时间 -->
+    <!-- 自定义属性：是否显示指示器 -->
+    <attr name="showIndicator" format="boolean" />
+    <!-- 自定义属性：轮播视图或组件的方向 -->
+    <attr name="orientation" format="enum">
+        <!-- 水平方向 -->
+        <enum name="horizontal" value="0" />
+        <!-- 垂直方向 -->
+        <enum name="vertical" value="1" />
+    </attr>
+
+    <!-- 自定义属性：是否自动播放 -->
+    <attr name="autoPlaying" format="boolean" />
+    <!-- 自定义属性集合：RecyclerViewBannerBase -->
+    <declare-styleable name="RecyclerViewBannerBase">
+        <!-- 引用 interval 属性 -->
+        <attr name="interval" />
+        <!-- 引用 showIndicator 属性 -->
+        <attr name="showIndicator" />
+        <!-- 引用 orientation 属性 -->
+        <attr name="orientation" />
+        <!-- 引用 autoPlaying 属性 -->
+        <attr name="autoPlaying" />
+
+        <!-- 指示器选中状态的资源，可以是颜色或引用 -->
+        <attr name="indicatorSelectedSrc" format="color|reference" />
+        <!-- 指示器未选中状态的资源，可以是颜色或引用 -->
+        <attr name="indicatorUnselectedSrc" format="color|reference" />
+        <!-- 指示器之间的间距，可以是尺寸或引用 -->
+        <attr name="indicatorSpace" format="dimension|reference" />
+        <!-- 指示器的左边距，可以是尺寸或引用 -->
+        <attr name="indicatorMarginLeft" format="dimension|reference" />
+        <!-- 指示器的右边距，可以是尺寸或引用 -->
+        <attr name="indicatorMarginRight" format="dimension|reference" />
+        <!-- 指示器的底边距，可以是尺寸或引用 -->
+        <attr name="indicatorMarginBottom" format="dimension|reference" />
+
+        <!-- 指示器的对齐方式 -->
+        <attr name="indicatorGravity" format="enum">
+            <!-- 左对齐 -->
+            <enum name="left" value="0" />
+            <!-- 居中对齐 -->
+            <enum name="center" value="1" />
+            <!-- 右对齐 -->
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <!-- 自定义属性集合：BannerLayout -->
+    <declare-styleable name="BannerLayout">
+        <!-- 引用 interval 属性 -->
+        <attr name="interval" />
+        <!-- 引用 showIndicator 属性 -->
+        <attr name="showIndicator" />
+        <!-- 引用 orientation 属性 -->
+        <attr name="orientation" />
+        <!-- 引用 autoPlaying 属性 -->
+        <attr name="autoPlaying" />
+
+        <!-- 项之间的间距 -->
+        <attr name="itemSpace" format="integer" />
+        <!-- 中心项的缩放比例 -->
+        <attr name="centerScale" format="float" />
+        <!-- 轮播移动速度 -->
+        <attr name="moveSpeed" format="float" />
+    </declare-styleable>
+</resources>
