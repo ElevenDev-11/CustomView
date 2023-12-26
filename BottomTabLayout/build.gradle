@@ -33,7 +33,7 @@ afterEvaluate {
             release(MavenPublication) {
                 groupId = 'cn.elevendev.BottomTabLayout' //groupId 随便取，jitpack不会使用
                 artifactId = 'BottomTabLayout'  //test随便取,jitpack不会使用
-                version = '1.0.0' //随便取，jitpack不会使用
+                version = '1.0.1' //随便取，jitpack不会使用
             }
         }
     }
