@@ -25,15 +25,24 @@ android {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
 }
 
 afterEvaluate {
     publishing {
         publications {
+            //创建一个名为release的Maven发布
             release(MavenPublication) {
-                groupId = 'cn.elevendev.BannerLayout' //groupId 随便取，jitpack不会使用
-                artifactId = 'BannerLayout'  //test随便取,jitpack不会使用
-                version = '1.0.0' //随便取，jitpack不会使用
+                //应用发布内部版本变体的组件
+                from components.release
+                groupId = 'cn.elevendev.BannerLayout'
+                artifactId = 'BannerLayout'
+                version = '1.0.1'
             }
         }
     }
