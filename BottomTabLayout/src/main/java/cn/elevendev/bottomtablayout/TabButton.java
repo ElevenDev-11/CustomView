@@ -11,6 +11,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import androidx.core.content.res.ResourcesCompat;
@@ -44,6 +45,10 @@ public class TabButton extends View {
     private long mDuration;
     private int mType = 0;
     private int mNews = -1;
+    private boolean mIsSwiping;
+    private float mStartX;
+    private float mStartY;
+    private final int mTouchSlop = ViewConfiguration.get(this.getContext()).getScaledTouchSlop();
 
     private boolean isSelected = false;
 
@@ -162,6 +167,32 @@ public class TabButton extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                mStartX = event.getX();
+                mStartY = event.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (Math.abs(event.getX() - mStartX) > mTouchSlop || Math.abs(event.getY() - mStartY) > mTouchSlop) {
+                    mIsSwiping = true;
+                    return true;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                if (mIsSwiping) {
+                    mIsSwiping = false;
+                    return false;
+                }
+                if (!isSelected) {
+                    startAnimation();
+                }
+                break;
+        }
+        return super.onTouchEvent(event);
+    }
+    /*
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
         int action = event.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
@@ -172,7 +203,7 @@ public class TabButton extends View {
         }
         return super.onTouchEvent(event);
     }
-
+*/
     //开始动画
     public void startAnimation() {
         ValueAnimator animator = ValueAnimator.ofFloat(0, 1);
