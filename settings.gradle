@@ -16,3 +16,4 @@ rootProject.name = "CustomView"
 //include ':app'
 include ':BottomTabLayout'
 include ':BannerLayout'
+include ':NumberProgressBar'

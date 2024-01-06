@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义进度条-->
+    <declare-styleable name="HorizontalProgressBarWithNumber">
+        <!-- 未达到进度的颜色 -->
+        <attr name="progress_unreached_color" format="color" />
+        <!-- 未达到进度部分的高度 -->
+        <attr name="progress_unreached_height" format="dimension" />
+        <!-- 已达到进度的颜色 -->
+        <attr name="progress_reached_color" format="color" />
+        <!-- 已达到进度部分的高度 -->
+        <attr name="progress_reached_height" format="dimension" />
+        <!-- 进度文字的颜色 -->
+        <attr name="progress_text_color" format="color" />
+        <!-- 进度文字的大小 -->
+        <attr name="progress_text_size" format="dimension" />
+        <!-- 进度文字的内边距 -->
+        <attr name="progress_text_padding" format="dimension" />
+    </declare-styleable>
+</resources>
