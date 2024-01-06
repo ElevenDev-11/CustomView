@@ -12,10 +12,10 @@ import android.widget.ProgressBar;
 public class NumberProgressBar extends ProgressBar {
 
     private static final int DEFAULT_TEXT_SIZE = 10;
-    private static final int DEFAULT_TEXT_COLOR = 0XFFFC00D1;
+    private static final int DEFAULT_TEXT_COLOR = 0XFF83AAF9;
     private static final int DEFAULT_REACHED_COLOR = DEFAULT_TEXT_COLOR;
     private static final int DEFAULT_REACHED_HEIGHT = 3;
-    private static final int DEFAULT_UNREACHED_COLOR = 0xFFd3d6da;
+    private static final int DEFAULT_UNREACHED_COLOR = 0x10000000;
     private static final int DEFAULT_UNREACHED_HEIGHT = 3;
     private static final int DEFAULT_SIZE_TEXT_PADDING = 10;
 
